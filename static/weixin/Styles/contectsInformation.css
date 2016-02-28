@@ -1,0 +1,30 @@
+.topaccount{
+    max-width: 24px;
+    max-height: 24px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 4px;
+}
+.topaccountSpan{
+    color: #FFFFFF;float: right;
+    margin-right: 10px;font-size: 16px;
+    margin-top: 10px;
+}
+.accountA{
+    font-size: 16px;margin-left: 4%;
+    margin-top: 16px;float: left;width: 25%;
+}
+.accountB{
+    margin-left: 20px;
+    margin-top: 18px;float: left;width: 60%;
+    font-size: 14px;
+    border-top-style: none;border-right-style: none;
+    border-left-style: none;border-bottom-style: none;
+}
+.clear{
+    clear: both;
+}
+#subId{
+background-color: #F2590D;border-radius: 5px;
+margin-left: 3%;margin-right: 3%;width: 94%;margin-top: 40px;color: #FFFFFF
+}

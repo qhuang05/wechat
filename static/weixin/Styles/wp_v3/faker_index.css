@@ -1,0 +1,23 @@
+img{border-style:none;}
+.imgbox{width:100%;height:180px;}
+.imgbox img{width:100%;height:180px;}
+.imgbox ul{list-style-type:none;margin:0px;padding:0px;}
+.imgbox ul li{display:none;}
+.title_bg{z-index:1;background-color:#000;filter:alpha(opacity=30);-moz-opacity:0.3;opacity:0;}
+.title{z-index:2;color:black;text-indent:10px;font-size:14px;line-height:40px;}
+.pager{z-index:3;}
+.common{position:relative;height:40px;margin-top:-43px;}
+.pager ul{margin-top:5px;}
+.pager ul li{float:right;color:black;font-size:15px;display:block;width:27px;height:27px;
+margin-right:4px;margin-top:5px;text-align:center;line-height:25px;cursor:pointer;}
+.goTop{left:87%; bottom:75px; position:fixed; width:25px; height:25px; z-index:100;display: none;}
+.goTop img{max-height: 30px;max-width: 30px;}
+.NEWSLABEL{width: 40px;height: 40px;float: left}
+.newslabelImg{max-height: 40px;max-width: 40px}
+.titleDiv{width: 100%;height: 59px}
+.newsImg{width: 100%;height: 150px;}
+.newsImg img{width: 100%;max-height: 150px;}
+.titleR{width: 80%;height: 23px;float: left;margin-left: 6px;margin-top: -5px}
+.titleR span{font-size: 23px;}
+.subhead{height: 14px;width: 80%;float: left;margin-left: 6px;margin-top: 8px}
+.xuhao{color: black;background-image: url(/static/weixin/Images/wp_v3/icon_order.png);background-size: cover;}

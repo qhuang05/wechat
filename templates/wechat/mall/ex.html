@@ -1,0 +1,37 @@
+{#继承基础模板#}
+{% extends "wechat/layout.html" %}
+{#引入宏#}
+{% import "wechat/macros/_bottom.html" as bottom %}
+
+{#引入外部css#}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/static/AmazeUI/assets/css/amazeui.min.css">
+{% endblock %}
+
+{#书写本页css#}
+{% block extra_stylesheets %}
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: #00a0f8;
+        }
+    </style>
+{% endblock %}
+
+{#页内正式工作区#}
+{% block content %}
+
+    <div class="am-u-md-11">aaa</div>
+    {# 引用宏 #}
+    {{ bottom.bottom_div() }}
+{% endblock %}
+
+{#书写页内js#}
+{% block load_js %}
+    <script>
+        $(document).ready(function a() {
+            alert(1);
+        });
+    </script>
+{% endblock %}

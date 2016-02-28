@@ -1,0 +1,20 @@
+
+/*  底部菜单样式, icon图标等切图出来之后会再进行修改  */
+.bottom-menu {
+    height: 49px;
+    background: #323232;
+    opacity: 0.94;
+    text-align: center;
+    font-size: 10px;
+}
+.bottom-menu li a {
+    display: block;
+    padding-top: 12px;
+    color: white;
+}
+.bottom-menu li a:link { }
+.bottom-menu li a:hover { }
+.bottom-menu li a:visited { }
+.bottom-menu li .menu-active {
+    color: #FFFF00;
+}

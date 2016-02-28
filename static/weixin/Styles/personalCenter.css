@@ -1,0 +1,47 @@
+.myaccount {
+    max-width: 32px;
+    max-height: 32px;
+    margin-top: 15px;
+    margin-left: 4%;
+    float: left;
+}
+
+.personalCenter {
+    float: left;
+    margin-top: 18px;
+    margin-left: 13px;
+}
+
+.expand {
+    max-height: 28px;
+    max-width: 14px;
+    float: right;
+    margin-right: 4%;
+    margin-top: 18px;
+}
+
+.spanB {
+    float: left;
+    margin-top: 13px;
+    margin-left: 13px;
+}
+
+.expandB {
+    max-height: 28px;
+    max-width: 14px;
+    float: right;
+    margin-right: 4%;
+    margin-top: 13px;
+}
+
+.clsA {
+    margin-top: 10px;
+    background-color: #FFFFFF;
+    height: 50px;
+}
+
+.clsB {
+    margin-top: 1px;
+    background-color: #FFFFFF;
+    height: 50px
+}

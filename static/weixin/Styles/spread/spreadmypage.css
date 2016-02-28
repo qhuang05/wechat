@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+}
+.title{
+    background-color: #FF876C;max-height: 49px;width: 100%;margin: 0;
+}
+.leftlogo{
+    max-height: 20px;max-width: 20px;margin-left: 6%;margin-top: 12px;float: left;
+}
+.sharefont{
+    font-size: 1.6rem;color: #F2F2F2;margin-top: 10px;float: left;margin-left: 2%;
+}
+.setfont{
+    font-size: 1.6rem;color: #FFFFFF;margin-top: 10px;float: right;padding-right: 6px;
+}
+.settinglogo{
+    max-width: 18px;max-height: 18px;padding-right: 6px;margin-top: 14px;margin-bottom: 14px;float: right;
+}
+.msg-font{
+    font-size: 1.6rem;
+}
+.discription{
+    float: left;padding-left: 2%;margin: 0 auto;
+}
+.partial_banknum{
+    float: left;padding-left: 2%;margin: 0 auto;
+}
+.num{
+    font-size: 1.8rem;color: #FF6430;text-align: center;
+}
+.label{
+    font-size: 1.4rem;color: #757575;text-align: center;
+}
+.sharebutton{
+    max-height: 20px;max-width: 20px;margin-top: 20px;
+}
+.sharebuttonfont{
+    color: #FFFFFF;font-size: 1.6rem;margin: 10px 0;text-align: center;
+}
+.leftlabel{
+    max-height: 20px;max-width: 20px;float: left;margin-left: 12%;
+}
+.title-center{
+    font-size: 2rem;color: #fff;text-align: center;vertical-align: middle;
+}
+.goback-button{
+    max-width: 43px;max-height: 24px;
+}
+
+.spread-qrcode{
+    background-color: #0AACEA;float: left;height: 7rem;padding: 0 10px;width: 49%;
+}
+.sharediv{
+    margin-bottom: 40px;text-align: center;
+}
+.nav {
+    position: fixed;bottom: 0;height: 44px;z-index: 2;background-color: #fff;
+}
+ul {
+    padding: 0;
+}
+
+ul#nav {
+    width: 100%;height: 44px;background: #FFF;margin: 0 auto
+}
+
+ul#nav li {
+    display: inline;height: 44px
+}
+
+ul#nav li a {
+    display: inline-block;padding: 0 1%;line-height: 43px;color: #555;font-size: 14px
+}
+.pop-div{
+    width: 85%;height: 85%;margin-top: 8%;margin-left: 7%;border-radius: 6px;
+}
+a:hover {
+    color: #535353;
+}
+
+a:visited {
+    color: #535353;
+}
+
+a:link {
+    color: #535353;
+}
+
+a {
+    color: #535353;
+}
+.table-base{
+    font-size: 14px;
+}
+.table-head{
+    text-align: center;margin: 10px auto;
+}

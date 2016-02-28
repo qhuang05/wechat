@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<title>酒到位管理系统</title>
+    <script type="text/javascript" src="static/jquery.min.js"></script>
+	<script type="text/javascript" src="static/jquery.easyui.min.js"></script> 
+    <script type="text/javascript" src="static/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="static/js/main.js?v=4353"></script>
+    <link rel="stylesheet" type="text/css" id="main-style" href="static/css/main.css" >
+    <link rel="stylesheet" type="text/css" id="swicth-style" href="static/themes/metro/easyui.css?v=1234" >
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript">
+    setInterval("main.time()",5000);
+    setInterval("main.sendtime()", 10000);
+</script>
+<style type="css/text">
+
+</style>
+</head>
+<body class="easyui-layout">
+	<div region="north" border="true" class="cs-north">
+		<div class="cs-north-bg">
+			<div class="cs-north-logo">玩啤管理系统</div>
+                <ul class="ui-skin-nav">				
+                    <li class="li-skinitem" title="gray"><span class="gray" rel="gray"></span></li>
+                    <li class="li-skinitem" title="default"><span class="default" rel="default"></span></li>
+                    <li class="li-skinitem" title="bootstrap"><span class="bootstrap" rel="bootstrap"></span></li>
+                    <li class="li-skinitem" title="black"><span class="black" rel="black"></span></li>
+                    <li class="li-skinitem" title="metro"><span class="metro" rel="metro"></span></li>
+                </ul>
+			</div>
+	</div>
+
+	<div region="west" border="true" split="true" title=" " class="cs-west">
+		<div class="easyui-accordion" fit="true" border="false">
+                {% if data.userStatus=='1'or data.userStatus =='4' or data.userStatus=='2' %}
+                    <div title="订单管理" selected="true">
+                        <a href="javascript:void(0);" src="/orderQuery" class="cs-navi-tab">订单明细</a></p>
+                    </div>
+                    <div title="配送维护">
+                        <a href="javascript:void(0);" src="/orderSend" class="cs-navi-tab">订单配送管理</a></p>
+                        <a href="javascript:void(0);" src="/deliveryDetails" class="cs-navi-tab">配送员管理</a></p>
+                        <a href="javascript:void(0);" src="/shipDetails" class="cs-navi-tab">配送站管理</a></p>
+                    </div>
+                {% endif %}
+
+                {% if data.userStatus=='1' or data.userStatus=='2' %}
+                    <div title="数据维护">
+                        <a href="javascript:void(0);" src="/clientDataQuery" class="cs-navi-tab">客户数据查询</a></p>
+                        <a href="javascript:void(0);" src="/walletManage" class="cs-navi-tab">代金劵数据管理</a></p>
+                    </div>
+                {% endif %}
+{#                {% if data.userStatus=='1' or data.userStatus=='2' or data.userStatus=='3' %}#}
+{#                    <div title="活动维护">#}
+{#                        <a href="javascript:void(0);" src="/activityManage" class="cs-navi-tab">活动管理</a></p>#}
+{#			        </div>#}
+{#			    {% endif %}#}
+                {% if data.userStatus=='1' or data.userStatus=='2' %}
+                    <div title="地推管理">
+                        <a href="javascript:void(0);" src="/spreadPage" class="cs-navi-tab">地推人员维护</a></p>
+                        <a href="javascript:void(0);" src="/spreadStatisics" class="cs-navi-tab">地推数据统计</a></p>
+                     </div>
+                {% endif %}
+                {% if data.userStatus=='1' %}
+                    <div title="客户管理">
+                        <a href="javascript:void(0);" src="/clientQuery" class="cs-navi-tab">客户明细</a></p>
+                    </div>
+                    <div title="用户管理">
+                        <a href="javascript:void(0);" src="/userQuery" class="cs-navi-tab">用户明细</a></p>
+                        <a href="javascript:void(0);" src="api/validatebox.html" class="cs-navi-tab">密码修改</a></p>
+                    </div>
+                    <div title="品项维护">
+                        <a href="javascript:void(0);" src="/articleManage" class="cs-navi-tab">品项管理</a></p>
+                    </div>
+                    <div title="资讯维护">
+                        <a href="javascript:void(0);" src="/informationManage" class="cs-navi-tab">资讯管理</a></p>
+                    </div>
+                    <div title="运营维护">
+                        <a href="javascript:void(0);" src="/levelManage" class="cs-navi-tab">等级管理</a></p>
+                        <a href="javascript:void(0);" src="/integralManage" class="cs-navi-tab">积分管理</a></p>
+                        <a href="javascript:void(0);" src="/activityManage" class="cs-navi-tab">代金劵管理</a></p>
+                        <a href="javascript:void(0);" src="/medalQuery" class="cs-navi-tab">勋章管理</a>
+                    </div>
+                {% endif %}
+		</div>
+	</div>
+	<div id="mainPanle" region="center" border="true" border="false">
+		 <div id="tabs" class="easyui-tabs"  fit="true" border="false" >
+                <div title="Home">
+				<div class="cs-home-remark">
+					<h1>玩啤管理系统</h1>
+				</div>
+				</div>
+        </div>
+	</div>
+    <audio id="chatAudio"><source src="/static/source/notify.mp3" type="audio/mpeg"></audio>
+
+	<div region="south" border="false" id="south"><center>@gmail.com</center></div>
+	
+	<div id="mm" class="easyui-menu cs-tab-menu">
+		<div id="mm-tabupdate">刷新</div>
+		<div class="menu-sep"></div>
+		<div id="mm-tabclose">关闭</div>
+		<div id="mm-tabcloseother">关闭其他</div>
+		<div id="mm-tabcloseall">关闭全部</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <title>酒到位登陆</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <script type="text/javascript" src="static/jquery.min.js"></script>
+      <script type="text/javascript" src="static/jquery.easyui.min.js"></script>
+      <script type="text/javascript" src="static/locale/easyui-lang-zh_CN.js"></script>
+      <script type="text/javascript" src="static/js/system/login.js?v=2015"></script>
+      
+      <link rel="stylesheet" type="text/css" href="static/themes/default/easyui.css">
+      <link rel="stylesheet" type="text/css" href="static/themes/icon.css"> 
+      <script type="text/javascript">
+      </script>
+  </head>
+  
+  <body>
+  	<div style="width:220px; height:300px; margin:-103px 0px 0px 140px; position:absolute; top:50%; left:50%;">
+        <form id="loginInputForm" action="/regist" method="post">
+			<table>
+				<tr>
+					<th>用户名</th>
+					<td><input type="text" name="username" id="username" value="" /></td>
+				</tr>
+				<tr>
+					<th>密码</th>
+					<td><input type="password" name="password" id="password" value="" /></td>
+				</tr>
+			</table>
+			<div style="margin-left: 55px;">
+                <input type="button" class="easyui-linkbutton" id="login" value="登陆" onclick="Login.login();" >
+                <input type="button" class="easyui-linkbutton" id="clear" value="重置" onclick="Login.clear();">
+			</div>
+		</form>
+	</div>
+	
+  </body>
+</html>

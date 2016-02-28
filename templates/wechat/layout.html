@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    {% block meta %}
+    {% endblock %}
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>{% block title %}{% endblock %}</title>
+    {% block stylesheets %}
+    {% endblock %}
+    {% block extra_stylesheets %}
+    {% endblock %}
+    {% block javascripts %}
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/static/jquery-2.1.4.min.js">\x3C/script>')</script>
+    {% endblock %}
+    {% block extra_javascripts %}{% endblock %}
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+
+{% block content %}
+    {#    这里写html#}
+{% endblock %}
+
+
+{% block load_js %}
+    {#    页面内部的js#}
+{% endblock %}
+
+</body>
+</html>

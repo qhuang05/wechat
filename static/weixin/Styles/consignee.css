@@ -1,0 +1,47 @@
+.topaccount{
+    max-width: 24px;
+    max-height: 24px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 4px;
+}
+.topaccountSpan{
+    color: #FFFFFF;float: right;
+    margin-right: 10px;font-size: 16px;
+    margin-top: 10px;
+}
+.newCon{
+    background-color: #FFFFFF;  height: 50px;
+}
+.newConA{
+    float: left;margin-left: 5%;margin-top: 16px;
+    TEXT-DECORATION:none;color: #555555;
+}
+.hengheng{
+    margin-top: 10px;
+}
+.newConB{
+    background-color: #FFFFFF;
+    height: 50px;
+}
+.usernameCls{
+    float:left;font-size: 16px;
+    margin-top: 13px;margin-left: 5%;width: 30%;
+}
+.userNumCls{
+    float: left;font-size: 16px;
+    margin-top: 13px;margin-left: 5%;
+}
+.usernameChecked{
+    float: right;margin-right: 5%;
+    max-height: 20px;max-width: 20px;
+    margin-top: 18px;
+}
+.clear{
+    clear: both;
+}
+.deleteImg{
+    float: right;margin-right: 20px;
+    max-height: 20px;max-width: 20px;
+    margin-top: 18px;
+}

@@ -1,0 +1,51 @@
+{#继承基础模板#}
+{% extends "wechat/layout.html" %}
+
+{#标题#}
+{% block title %}
+    我的收藏
+{% endblock %}
+
+{#引入外部css#}
+{% block stylesheets %}
+    <link rel="stylesheet" href="../../../static/AmazeUI/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../../../static/weixin/Styles/wp_v3/myCollections.css">
+{% endblock %}
+
+{#页内正式工作区#}
+{% block content %}
+    {% if colList %}
+        <ul class="am-list" id="colList">
+            {% for good in colList %}
+                <li class="am-g">
+                    <div class="am-u-sm-7">
+                        <img src="{{ good['SMALL_IMGURL'] }}" alt="商品图片" width="193px" height="110px"
+                             onclick="window.location.href='/mall/goodDetails?id={{ good['ID'] }}'"/>
+                    </div>
+                    <div class="am-u-sm-5">
+                        <div class="goodName">{{ good['ARTICLE_NAME'] }}</div>
+                        <div class="unitPrice">
+                            <!--<img src="../../../static/weixin/Images/wp_v3/icon_money.png" alt="￥" width="9px"
+                                 height="12px"/>-->
+                            <span>￥{{ good['UNIT_PRICE'] }}</span>
+                            <span>元</span>
+                        </div>
+                        <div id="col_status">
+                            <input type="text" value="{{ good['IS_EFFECT'] }}" style="display:none"/>
+                            <img src="/static/weixin/Images/wp_v3/btn_pre_collection.png" alt="收藏按钮" width="17px"
+                                 height="17px" onclick="isCollect({{ good['ID'] }},this)"/>
+                            <span>已收藏</span>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div class="emptyList">您还没有收藏任何商品哦!</div>
+    {% endif %}
+{% endblock %}
+
+{#引入外部js#}
+{% block extra_javascripts %}
+    <script src="../../../static/weixin/Scripts/wp_v3/myCollections.js"></script>
+{% endblock %}

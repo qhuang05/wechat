@@ -1,0 +1,169 @@
+
+.am-tabs {
+    margin:0;
+    padding:0;
+}
+.orderNav {
+    height: 56px;
+    line-height: 56px;
+    vertical-align: middle;
+    border-bottom: 1px solid #CFCFCF;
+    background: white;
+}
+.orderNav a {}
+.orderNav a:link { color: black; }
+.orderNav a:hover {}
+.orderNav a:visited {}
+
+.orderNav .active a {}
+.orderNav .active a:link { color: #D9A633; text-decoration: underline; }
+.orderNav .active a:hover {}
+.orderNav .active a:visited {}
+
+#orderBd {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* 订单状态, 状态进度条 */
+#orderStatus {
+    list-style: none;
+}
+#orderStatus li{
+    height: 63px;
+    padding: 0 30px;
+    background: transparent url("../../../../static/weixin/Images/wp_v3/navigationbar.png") 0 0 no-repeat;
+    background-size: 15px 845px;
+}
+#orderStatus li.status_01 {
+    background-position: 0 0px;
+    /*background-position: 0 -360px;*/
+}
+#orderStatus li.status_02 {
+    background-position: 0 0px;
+    /*background-position: 0 -360px;*/
+}
+#orderStatus li.status_03 {
+    background-position: 0 0px;
+    /*background-position: 0 -360px;*/
+}
+#orderStatus li.status_03 img{
+    margin-left: 18px;
+}
+#orderStatus li.status_04 {
+    /*background-position: 0 -790px;*/
+    background-position: 0 -63px;
+    /*background-position: 0 -345px;*/
+}
+#orderStatus li .time {
+    font-size: 12px;
+    color: #8E8E8E;
+    line-height: 24px;
+    vertical-align: top;
+    padding-left: 2rem;
+}
+#orderStatus li .status {
+    background: #F0F0F0;
+    font-size: 14px;
+    color: #323232;
+    line-height: 39px;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+/* 订单详情 */
+#orderInfo, #goodsList {
+    padding: 0;
+    margin: 0;
+}
+#goodsList li {
+    border: 0;
+    border-bottom: 1px solid #E6E6E6;
+    margin-bottom: 8px;
+}
+#goodsList [class*='am-u-sm-7'] {
+    margin: 0;
+    padding: 0;
+}
+#goodsList [class*='am-u-sm-5'] {
+    text-align: right;
+}
+#goodsList [class*='am-u-sm-5'] h4{
+    font-size: 15px;
+    color: #323232;
+    font-weight: normal;
+}
+#goodsList [class*='am-u-sm-5'] span{
+    font-size: 13px;
+    color: #8E8E8E;
+    line-height: 36px;
+    vertical-align: middle;
+}
+.total {
+    border-bottom: 5px solid #EDEDED;
+    font-size: 15px;
+    color: #D9A633;
+    height: 42px;
+    line-height: 42px;
+    vertical-align: middle;
+}
+#total {
+    text-align: right;
+}
+#orderInfo {
+    font-size: 12px;
+    line-height: 17px;
+    color: #323232;
+    margin: 10px 0;
+}
+#onceAgain {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*旧版, 已作废*/
+/*/!*订单收货人,地址等信息*!/*/
+/*#userInfo [class*='am-u-sm'] {*/
+    /*height: 24px;*/
+    /*margin: 20px 0 24px 0;*/
+/*}*/
+/*#userInfo [class*='am-u-sm-5'] span {*/
+    /*color: #8E8E8E;*/
+    /*font-size: 13px;*/
+
+/*}*/
+/*#userInfo [class*='am-u-sm-7'] input {*/
+    /*width: 100%;*/
+    /*height: 24px;*/
+    /*border: 0;*/
+    /*font-size: 15px;*/
+    /*text-align: right;*/
+/*}*/
+/*/!*订单商品一览表*!/*/
+/*#goodsList {*/
+    /*text-align: center;*/
+    /*font-weight: normal;*/
+/*}*/
+/*#goodsList li {*/
+    /*border:0;*/
+    /*margin-bottom: 6px;*/
+/*}*/
+/*#goodsList [class*='am-u-sm-5'] h4{*/
+    /*font-size: 15px;*/
+    /*list-style: none;*/
+/*}*/
+/*#goodsList [class*='am-u-sm-5'] span{*/
+    /*font-size: 13px;*/
+    /*vertical-align: middle;*/
+    /*text-align: right;*/
+/*}*/
+/*#totalPrice {*/
+    /*text-align: right;*/
+    /*font-size: 13px;*/
+    /*padding-bottom: 10px;*/
+/*}*/
+/*#onceAgain img{*/
+    /*width: 100%;*/
+/*}*/

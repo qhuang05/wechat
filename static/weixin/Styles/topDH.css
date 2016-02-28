@@ -1,0 +1,47 @@
+
+.menu.am-nav>li.am-active>a,
+.menu.am-nav>li.am-active>a:focus,
+.menu.am-nav>li.am-active>a:hover {
+  background: #FFFFFF;
+}
+/*点击后收回下拉菜单之后的样式*/
+.menu.am-nav>li>a:focus,
+.menu.am-nav>li>a:hover {
+  background: #FFFFFF;
+}
+
+.menu .menu-trigger {
+  color: black;
+}
+/*空出来的颜色，下拉菜单的*/
+.menu-item {
+  background: #FFFFFF;
+  min-width: 100px;
+}
+/*下拉菜单那个尖头的颜色*/
+.am-dropdown-content:after, .am-dropdown-content:before {
+  /*border-bottom-color: #FFFFFF;*/
+}
+/*下拉菜单的背景颜色*/
+.menu .menu-item a {
+  background: #FFFFFF;
+}
+
+.menu .menu-item a:hover {
+  background: #FFFFFF;
+}
+
+.topaccount {
+    max-width: 28px;
+    max-height: 28px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+.liStyle {
+    width: 10px;
+}
+/*北京颜色*/
+.topmargin{
+    background-color: #FFFFFF;margin-top: 3px
+}

@@ -1,0 +1,69 @@
+.JDT2{
+    border-radius: 20px;
+    margin-left: 38px;
+    margin-top: 3px;
+    margin-bottom: 0;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 326px;
+    z-index: 2;
+    background:-webkit-gradient(linear, 100% 0%, 0% 0%,from(#97c340), to(#dddc64));
+}
+.JDT1{
+    border-radius: 20px;margin-left: 38px;margin-top: 3px;
+    margin-bottom: 0;
+    height: 10px;
+    background-color: #e5e5e5;
+    position: absolute;
+    left: 0;top: 326px;
+    z-index: 0;
+}
+.JDT3{
+    max-height: 25px;
+    max-width: 25px;
+    position: absolute;
+    left: 38px;top: 321px;
+    z-index: 3;
+}
+/*0-10*/
+.JYS{
+    position: absolute;
+    left: 38px;top: 300px;
+    z-index: 0;
+
+}
+/*10-100*/
+.jys1{
+    position: absolute;
+    left: 15px;top: 300px;
+    z-index: 0;
+}
+/*100-1000*/
+.jys2{
+    position: absolute;
+    left: 18px;top: 300px;
+    z-index: 0;
+}
+/*1000*/
+.jys3{
+    position: absolute;
+    left: 8px;top: 300px;
+    z-index: 0;
+}
+.top{
+    width: 100%;height: 178px;background-color: darkgrey
+}
+.top img{
+    max-height: 60px;max-width: 69px;margin-top: 20px
+}
+.top2{
+    width: 47px;height: 74px;margin-top: 16px;margin-left: 25px;float: left
+}
+.Rool_Centent{
+    margin-top: 20px;margin-left: 27px;width: 263px;font-size: 13px;color: #8E8E8E
+}
+.JL{
+    color: #D8D8D8;
+}

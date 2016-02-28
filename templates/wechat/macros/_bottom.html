@@ -1,0 +1,43 @@
+{#定义宏#}
+{% macro bottom_div(menuFlag) %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.5.0/css/amazeui.min.css?v1.0.0.1">
+    <link rel="stylesheet" href="../../../static/weixin/Styles/wp_v3/bottom-menu.css">
+{% endblock %}
+
+{% block extra_stylesheets %}
+{% endblock %}
+
+<input type="text" style="display: none" id="menuFlag" value="{{ menuFlag }}"/>
+{% block content %}
+    <ul class="am-avg-sm-3 am-topbar-fixed-bottom bottom-menu" id="bottom-menu">
+        <li>
+            <a href="javascript:;">
+                <img src="../../../static/weixin/Images/wp_v3/icon_home.png" alt="index" width="20px"
+                     height="21px"/><br/>
+                <span>首页</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="../../../static/weixin/Images/wp_v3/icon_store.png" alt="index" width="19px"
+                     height="23px"/><br/>
+                <span>商城</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="../../../static/weixin/Images/wp_v3/icon_personal.png" alt="index" width="17px"
+                     height="21px"/><br/>
+                <span>我的</span>
+            </a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block extra_javascripts %}
+    <script src="../../../static/weixin/Scripts/wp_v3/bottomMenu.js"></script>
+{% endblock %}
+
+{% endmacro %}

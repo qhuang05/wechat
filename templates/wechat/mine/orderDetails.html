@@ -1,0 +1,192 @@
+{#继承基础模板#}
+{% extends "wechat/layout.html" %}
+{#引入宏#}
+{% import "wechat/macros/_bottom.html" as bottom %}
+
+{#引入外部css#}
+{% block stylesheets %}
+    <link rel="stylesheet" href="../../../static/AmazeUI/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../../../static/weixin/Styles/wp_v3/orderDetails.css">
+{% endblock %}
+
+{#书写本页css#}
+{% block extra_stylesheets %}
+{% endblock %}
+
+{#页内正式工作区#}
+{% block content %}
+    <div data-am-widget="tabs" class="am-tabs">
+        <ul class="am-tabs-nav am-cf am-topbar-fixed-top orderNav ">
+            <li class="">
+                <a href="[data-tab-orderStatus]">订单状态</a>
+            </li>
+            <li class="am-active active">
+                <a href="[data-tab-orderDetails]">订单详情</a>
+            </li>
+        </ul>
+
+        <div class="am-tabs-bd" id="orderBd">
+            <!-- 订单状态 -->
+            <ul data-tab-orderStatus class="am-tab-panel" id="orderStatus">
+                <input type="hidden" id="statusFlag" name="statusFlag" value="{{ orderStatus['SEND_STATUS'] }}" />
+                <li class="status_01">
+                    <div class="time">{{ orderStatus['SUBMIT_TIME'] }}&nbsp;</div>
+                    <div class="status">订单已提交</div>
+                </li>
+                <li class="status_02">
+                    <div class="time">{{ orderStatus['CREATE_TIME'] }}&nbsp;</div>
+                    <div class="status">玩啤已接单，商品准备中</div>
+                </li>
+                <li class="status_03">
+                    {% if orderStatus['SEND_TIME'] %}
+                        <div class="time">{{ orderStatus['SEND_TIME'] }}&nbsp;</div>
+                    {% else %}
+                        <div class="time">&nbsp;</div>
+                    {% endif %}
+                    <div class="status">配送员正在发货</div>
+                    <a href="tel://{{ orderStatus['DELIVERY_TEL'] }}"><img src="" alt="telephone" width="27px" height="27px" /></a>
+                </li>
+                <li class="status_04">
+                    {% if orderStatus['END_TIME'] %}
+                        <div class="time">{{ orderStatus['END_TIME'] }}&nbsp;</div>
+                    {% else %}
+                        <div class="time">&nbsp;</div>
+                    {% endif %}
+                    <div class="status">订单已完成</div>
+                </li>
+            </ul>
+
+            <!-- 订单详情 -->
+            <form data-tab-orderDetails class="am-container am-tab-panel am-active" id="orderInfo" action="" method="">
+                <ul class="am-list" id="goodsList">
+                    {% for goods in orderGoodsDetails %}
+                    <li class="am-g">
+                        <div class="am-u-sm-7">
+                            <img src="{{ goods['SMALL_IMGURL'] }}" alt="商品" width="168px" height="69px" />
+                        </div>
+                        <div class="am-u-sm-5">
+                            <h4>{{ goods['PRODUCT_NAME'] }} *{{ goods['ARTICLE_COUNT'] }}</h4>
+                            <div>
+                                <span>结算:</span>
+                                <!--<img src="../../../static/weixin/Images/wp_v3/icon_money.png" alt="" width="9px" height="12px" />-->
+                                <span>￥{{ goods['ARTICLE_MONEY'] }}元</span>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <!--  旧版, 已作废
+                <ul class="am-list" id="userInfo">
+                    <li class="am-g" style="border-top: 0">
+                        <div class="am-u-sm-5">
+                            <img src="../../../static/weixin/Images/wp_v3/icon_shouhuoren.png" alt="person" width="18px"
+                                 height="20px"/>
+                            <span>收货人</span>
+                        </div>
+                        <div class="am-u-sm-7">
+                            <input type="text" value="收货人收货人收货人" readonly="readonly"/>
+                        </div>
+                    </li>
+                    <li class="am-g">
+                        <div class="am-u-sm-5">
+                            <img src="../../../static/weixin/Images/wp_v3/icon_adress.png" alt="address" width="15px"
+                                 height="21px"/>
+                            <span>收货地址</span>
+                        </div>
+                        <div class="am-u-sm-7">
+                            <input type="text" value="收货地址收货地址收货地址" readonly="readonly"/>
+                        </div>
+                    </li>
+                    <li class="am-g">
+                        <div class="am-u-sm-5">
+                            <img src="../../../static/weixin/Images/wp_v3/icon_time.png" alt="time" width="17px"
+                                 height="17px"/>
+                            <span>送达时间</span>
+                        </div>
+                        <div class="am-u-sm-7">
+                            <input type="text" value="即时送达" readonly="readonly"/>
+                        </div>
+                    </li>
+                    <li class="am-g">
+                        <div class="am-u-sm-5">
+                            <img src="../../../static/weixin/Images/wp_v3/icon_beizhu.png" alt="" width="18px"
+                                 height="19px"/>
+                            <span>备注</span>
+                        </div>
+                        <div class="am-u-sm-7 notes">
+                            <input type="text" value="请尽快发货" readonly="readonly"/>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="am-list" id="goodsList">
+                    <li class="am-g">
+                        <div class="am-u-sm-7">
+                            <img src="" alt="" width="168px" height="69px"/>
+                        </div>
+                        <div class="am-u-sm-5">
+                            <h4>福佳白</h4>
+                            <img src="../../../static/weixin/Images/wp_v3/icon_money.png" alt="" width="9px"
+                                 height="12px"/>
+                            <span>??</span>
+                            <span>元/</span>
+                            <span>瓶</span>
+                        </div>
+                    </li>
+                </ul>
+                <div id="totalPrice">
+                    <span>结算:</span>
+                    <img src="../../../static/weixin/Images/wp_v3/icon_money.png" alt="" width="9px" height="12px"/>
+                    <span>??</span>
+                    <span>元</span>
+                </div>
+                <div id="oneAgain">
+                    <img src="../../../static/weixin/Images/wp_v3/btn_again.png" alt="再来一单" width="100%" height="37"/>
+                </div>
+                -->
+            <div class="am-g total">
+                <div class="am-u-sm-6">
+                    <span>合计</span>
+                </div>
+                <div class="am-u-sm-6" id="total">
+                    <!--<img src="../../../static/weixin/Images/wp_v3/icon_money.png" alt="" width="10px" height="14px" />-->
+                    <span>￥{{ orderMsgDetails['ORDER_MONEY'] }}元</span>
+                </div>
+            </div>
+            <div id="orderInfo">
+                <div>订单状态: <span id="sendStatus">{{ orderMsgDetails['SEND_STATUS'] }}</span></div>
+                <div>订单编号: <span>{{ orderMsgDetails['ORDERNO'] }}</span></div>
+                <div>订单时间: <span>{{ orderMsgDetails['SUBMIT_TIME'] }}</span></div>
+                <div>支付方式: <span id="defrayType">{{ orderMsgDetails['DEFRAY_TYPE'] }}</span></div>
+                <div>优惠券:
+                    {% if voucherMoney %}
+                        <span>{{ voucherMoney }}元优惠券</span>
+                    {% else %}
+                        <span>无</span>
+                    {% endif %}
+                </div>
+                <div>收货人: <span>{{ orderMsgDetails['OTHERNAME'] }}</span></div>
+                <div>手机号码: <span>{{ orderMsgDetails['ORDER_TEL'] }}</span></div>
+                <div>收货地址: <span>{{ orderMsgDetails['ORDER_ADDRESS'] }}</span></div>
+                <input type="hidden" value="{{ orderMsgDetails['OTHER_ID'] }}" />
+                <input type="hidden" value="{{ orderMsgDetails['ORDER_LONGITUDE'] }}" />
+                <input type="hidden" value="{{ orderMsgDetails['ORDER_LATITUDE'] }}" />
+            </div>
+            <div id="oneAgain">
+                <a href="/wechat/index/reOrderSubmit?order_id={{ orderGoodsDetails[0]['ID'] }}">
+                    <img src="../../../static/weixin/Images/wp_v3/btn_again.png" alt="再来一单" width="100%" height="37px" />
+                </a>
+            </div>
+            </form>
+        </div>
+    </div>
+    {# 引用宏 #}
+    {{ bottom.bottom_div('3') }}
+{% endblock %}
+
+{#引入外部js#}
+{% block extra_javascripts %}
+    <script src="../../../static/AmazeUI/assets/js/amazeui.min.js"></script>
+    <script src="../../../static/AmazeUI/assets/js/handlebars.min.js"></script>
+    <script src="../../../static/AmazeUI/assets/js/amazeui.widgets.helper.min.js"></script>
+    <script src="../../../static/weixin/Scripts/wp_v3/orderDetails.js?v=1800"></script>
+{% endblock %}

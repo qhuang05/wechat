@@ -1,0 +1,33 @@
+body {
+    background: #FFFFFF;
+}
+#colList li {
+    height: 111px;
+    margin: 5px 0;
+    border: 0
+}
+#colList [class='am-u-sm-5'] {
+    height: 111px;
+    text-align: center;
+    vertical-align: middle;
+}
+#colList [class='am-u-sm-5'] .goodName {
+    font-size: 15px;
+    font-weight: normal;
+    color: #323232;
+    padding-top: 10px;
+}
+#colList [class='am-u-sm-5'] .unitPrice {
+    font-size: 14px;
+    color: #8E8E8E;
+}
+#colList [class='am-u-sm-5'] #col_status {
+    font-size: 13px;
+    color: #8E8E8E;
+    padding-top:20px;
+}
+.emptyList {
+    font-size: 15px;
+    text-align: center;
+}
+

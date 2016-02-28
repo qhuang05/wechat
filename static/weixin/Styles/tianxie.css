@@ -1,0 +1,117 @@
+@charset "utf-8";
+body{ margin:0;
+	background-color:#f5f5f5}
+img{ display:block}
+	
+	
+.dingbu{ border-bottom:1px solid #e6e6e6;
+	background-color:#fafafa}
+.juzhong{ overflow:hidden;
+	margin:auto;
+	font-family:"微软雅黑";
+	font-size:16px;
+	color:#646464;
+	line-height:45px;
+	width:180px}
+.dingbu img{ margin-top:12px;
+	margin-left: 30px;
+	margin-right:10px;
+	max-width: 20px;
+	max-height: 20px;
+	float:left}
+.lanmu{ overflow:hidden;
+	background-color:#fafafa;
+	margin-top:10px}
+.zuotu{ float:left;
+	margin-left:3%;
+	margin-right:2%;
+	margin-top:17px;
+	margin-bottom: 17px;
+	max-width: 15px;
+	max-height: 15px;}
+.biaoti{ font-family:"微软雅黑";
+	margin-top:3px;
+	font-size:15px;
+	color:#323232;
+	line-height:44px;
+	width:20%;
+	float:left}
+.shurulan{ background-color:#fafafa;
+	font-family:"微软雅黑";
+	margin-top:3px;
+	font-size:87%;
+	color:#a9a9a9;
+	line-height:44px;
+	border:none;
+	float:left;
+	width:55%}
+.shurulan>span{float: left;margin-top: 1px;font-size: 14px;color: #FC6B32;}
+.dingweilan{ background-color:#fafafa;
+	font-family:"微软雅黑";
+	font-size:87.5%;
+	color:#a9a9a9;
+	line-height:20px;
+	border:none;
+	float:left;
+	width:50%
+}
+.money{ font-family:'微软雅黑';
+    padding: 0px 4px;
+    margin: 0px;
+	margin-top: 11px;
+	font-size: 15px;
+	color: #FC6B32;
+	float: left;
+	width: 58%;}
+.dingwei{ float:right;
+	margin-left:2%;
+	margin-right:5%;
+	margin-top:12px;
+	max-width: 25px;
+	max-height: 25px;}
+.gaoliang{ color:#fc6b32}
+.yuanjia{ font-size:87.5%;
+	text-decoration:line-through}
+.xuanze{ margin-top: 15px;
+	margin-bottom: 15px;
+	line-height:14px;
+	font-family:"微软雅黑";
+	font-size:87.5%;
+	color:#646464;
+	text-align:center}
+.xiamian{ overflow:hidden;
+	font-size: 14px;
+	width: 180px;
+	height: 100px;
+	margin: auto;}
+.tupian{ width:60px;
+	float:left;
+	text-align:center;
+	font-family:"微软雅黑";
+	font-size:87.5%;
+	color:#646464;
+	line-height:36px}
+.bianjie{
+	margin-right:60px}
+.tupian img{ margin:auto;
+	max-width: 45px;
+	max-height: 45px;}
+.huodong{ font-family:"微软雅黑";
+	font-size:87.5%;
+	line-height:28px;
+	color:#505050;
+	text-align:center;
+	margin-top:18px;
+	margin-bottom:16px}
+.select{
+	width: 100%;float: left;line-height: 50px;font-size: 14px;
+}
+.img{
+	float: right;max-height: 20px;max-width: 20px;padding: 15px 0;
+}
+.allinone{
+	width: 100%;display: none;
+}
+#all{
+	border: 1px #c1c1c1 solid;border-radius: 10px;width: 80%;margin: 0 10%;float: left;background-color: #f7faff;box-shadow: 0 0 8px #888888;
+}

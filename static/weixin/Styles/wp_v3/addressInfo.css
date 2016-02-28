@@ -1,0 +1,66 @@
+
+body {
+    background: #F2F2F2;
+}
+/*搜索栏*/
+.am-topbar-fixed-top {
+    background: white;
+    border-bottom: 1px solid #C9C9C9;
+}
+#search {
+    background: #EDEDED;
+    border-radius: 4px;
+    margin:5px 9px;
+    height: 34px;
+    text-align: center;
+}
+#search img {
+}
+#search #searchText {
+    border: 0;
+    background: transparent;
+    height: 34px;
+    width: 8rem;
+}
+#cancelBtn {
+    float: left;
+    margin: 5px 0;
+    line-height: 34px;
+    vertical-align: middle;
+    display: none;
+}
+
+#searchList {
+    margin-top: 44px;
+}
+/*定位*/
+#location {
+    background: white;
+    height: 56px;
+    line-height: 56px;
+    vertical-align: middle;
+    margin: 45px 0 0 0;
+    padding: 0 9px;
+}
+
+/*历史记录*/
+#searchHistory {  }
+#searchHistory>div {
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    padding: 0 0 0 30px;
+}
+#searchHistory ul{
+    list-style: none;
+    margin:0;
+    padding:0
+}
+#searchHistory li {
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    background: white;
+    margin:0 0 10px 0;
+    padding: 0 0 0 30px;
+}

@@ -1,0 +1,10 @@
+.dhcell{height: 40px;width: 25%;float: left}
+.cellbottom{background-color: #D9A633;height: 1px;width: 25%;float: left;position:absolute;top: 40px}
+.dhcell div{margin-top: 10px;}
+#dh{font-size: 15px;width: 100%;height: 41px}
+.djqall{width: 100%;height: 90px;margin-top: 20px;text-align: right;font-size: 12px;border-bottom: 1px solid #DEDFE0}
+.jztime{height: 20px;width: 100%;text-align: left}
+.jztime span{margin-left: 17px}
+.jzt{background-color: #009cda;height: 70px;width: 60%;float: left}
+.jzz{height: 20px;width: 80px;float: right;margin-top: 4px;margin-right: 14px}
+.jztt{height: 20px;width: 100px;float: right;margin-top: 19px;margin-right: 14px;color: #8E8E8E}

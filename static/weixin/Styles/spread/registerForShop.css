@@ -1,0 +1,52 @@
+.tables{
+    height: 30px;font-size: 14px;
+    border-top-style: none;border-right-style: none;
+    border-left-style: none;border-bottom-style: none;
+    margin-left: 10px;
+    width: 95%;
+}
+.submitClass{
+    width: 80%;font-size: 14px;
+    height:40px;background-color: #FF876C;
+    border-radius: 4px;
+    color:#fff;border: 0;
+    margin-left: 10%;margin-right: 10%;
+    margin-top: 15px;
+}
+.getCode{
+    height: 37px;border-radius: 4px;
+    display:block;
+    background: #ffffff;border-style:solid;
+    border-width:1px;
+    border-color:#FF876C;
+    float: left;
+    color: #FF876C;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.img{
+    max-height: 25px;max-width: 25px;float: left;
+    margin-left: 7px;margin-top: 3px;
+}
+.chooseCls{
+    width: 80px;height: 100px;float: left;
+}
+.chooseP{
+    text-align: center;margin-top: 11px;
+    color: #969696;
+}
+.oneCls{
+    width: 100%;height: 55px;margin-top: 0;
+    background: #ffffff;
+}
+.allPadding{
+    height: 50px;padding-left: 0;
+}
+.topborder{
+    border-top: 1px solid #F2F2F2;
+}
+.chooseImg{
+    margin-left: 0;
+    max-height: 80px;
+    max-width: 80px;
+}

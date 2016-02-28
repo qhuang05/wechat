@@ -1,0 +1,166 @@
+.back-color {
+    background-color: #EEE;
+}
+
+.font-color {
+    color: #535353;
+}
+
+.font16px {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+.div-color {
+    background-color: #FFF;
+    margin-bottom: 10px;
+}
+
+.div-height {
+    height: 50px;
+    line-height: 50px;
+}
+
+.expand-padding {
+    padding: -4px 0;
+}
+
+.goods-list-font {
+    float: left;
+    font-size: 15px;
+    line-height: 16px;
+    height: 35px;
+}
+
+.goods-sm-img {
+    float: left;
+}
+
+.decorate-price {
+    font-size: 14px;
+    float: left;
+}
+
+.dingweilan {
+    background-color: #fafafa;
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 20px;
+    border: none;
+    float: left;
+    width: 90%;
+    margin-left: 0;
+}
+
+.nav {
+    position: fixed;
+    top: 44px;
+    height: 44px;
+    z-index: 2;
+    box-shadow: 2px 2px 5px #EEE;
+}
+
+ul {
+    padding: 0;
+}
+
+ul#nav {
+    width: 100%;
+    height: 44px;
+    background: #FFF;
+    margin: 0 auto
+}
+
+ul#nav li {
+    display: inline;
+    height: 44px
+}
+
+ul#nav li a {
+    display: inline-block;
+    padding: 0 4%;
+    line-height: 43px;
+    color: #555;
+    font-size: 14px
+}
+
+.nav-bottom-style {
+    border-bottom: #F2590D 2px solid;
+}
+
+.topaccount {
+    max-width: 24px;
+    max-height: 24px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.topaccountSpan {
+    color: #FFFFFF;
+    float: right;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.topSpan {
+    color: #FFFFFF;
+    font-size: 16px;
+    float: right;
+    margin-top: 13px;
+    margin-right: 10px;
+}
+
+.input-box {
+    width: 100%;
+    height: 34px;
+    border: 1px #eee solid;
+}
+
+select {
+    width: 100%;
+    height: 34px;
+    border: solid 1px #eee;
+    appearance: none;
+    -webkit-appearance: none;
+    background: url('http://ourjs.github.io/static/2015/arrow.png') no-repeat scroll right center transparent;
+    font-size: 14px;
+    line-height: 34px;
+    border-radius: 2px;
+}
+
+/*定义div大小，以及水平居中*/
+.img-middle {
+    height: 50px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+a:hover {
+    color: #535353;
+}
+
+a:visited {
+    color: #535353;
+}
+
+a:link {
+    color: #535353;
+}
+
+a {
+    color: #535353;
+}
+#div {
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 5px;
+      position: absolute;
+    }

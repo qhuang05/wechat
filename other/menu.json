@@ -1,0 +1,35 @@
+{
+	"button": [{
+			"name": "关于",
+			"sub_button": [{
+				"type": "view",
+				"name": "关于我们",
+				"url": "http://mp.weixin.qq.com/s?__biz=MzAwOTY4MDMyMw==&mid=209174686&idx=1&sn=27db883a8a6480b3a09168e8b4199dba#rd"
+			}, {
+				"type": "view",
+				"name": "新手指南",
+				"url": "http://mp.weixin.qq.com/s?__biz=MzAwOTY4MDMyMw==&mid=402032251&idx=1&sn=86ea6058c2a27090a63adaabe164743c#rd"
+			}]
+		}, {
+			"type": "view",
+			"name": "下单 ",
+			"url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx79bbb135800d7863&redirect_uri=http://wp.beerwhere.cn/wechat/shopping/index&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect"
+		}, {
+			"name": "我的",
+			"sub_button": [{
+				"type": "view",
+				"name": "订单跟踪",
+				"url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx79bbb135800d7863&redirect_uri=http://wp.beerwhere.cn/wechat/messages/orderDetails2&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect"
+			}, {
+				"type": "view",
+				"name": "我的优惠劵",
+				"url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx79bbb135800d7863&redirect_uri=http://wp.beerwhere.cn/wechat/messages/coupons2&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect"
+			}, {
+				"type": "view",
+				"name": "超级代言人",
+				"url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx79bbb135800d7863&redirect_uri=http://wp.beerwhere.cn/spread/loginSpread&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect"
+			}]
+		}
+
+	]
+}

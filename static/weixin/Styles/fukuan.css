@@ -1,0 +1,61 @@
+@charset "utf-8";
+.xinxi{ padding:30px 20px 0 20px;
+	overflow:hidden;
+	color:#323232;
+	font-size:20px;
+	font-family:"微软雅黑";
+	line-height:20px;
+	border-bottom:1px solid #969696}
+.zuo img,.you img,.man img{ margin-bottom:-2px;
+	margin-right:10px}
+.zuo{ float:left;
+	width:50%;
+	margin-right:8px;
+	margin-bottom:30px}
+.you{ float:left;
+	margin-bottom:30px}
+.jinqian{ color:#fc6b32}
+.man{ width:100%;
+	float:left;
+	margin-bottom:30px}
+.weixin{ -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	background-color:#fc6b32;
+	width:36%;
+	float:left;
+	border:none;
+	font-family:"微软雅黑";
+	font-size:24px;
+	color:#f9f8f8;
+	line-height:50px;
+	text-align:center;
+	margin:20px 0;}
+.daohuo{ -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border:1px solid #FC6B32;
+	background-color:#FAFAFA;
+	width:36%;
+	float:right;
+	font-family:"微软雅黑";
+	font-size:24px;
+	color:#FC6B32;
+	line-height:50px;
+	text-align:center;
+	margin:20px 0;}
+.xiamian{ background-color:#f0f0f0;}
+.xiahua{ overflow:hidden;
+	padding:0 20px;
+	border-bottom:1px solid #969696}
+.tupian{ float:left;
+	display:block;
+	margin:20px 20px 20px 0}
+.pinming{ line-height:120px;
+	float:left;
+	font-size:24px;
+	font-family:"微软雅黑";
+	color:#323232}
+.jin{ float:right;
+	line-height:120px;
+	color:#ff7800;
+	font-size:22px;
+	font-family:"微软雅黑";}

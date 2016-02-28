@@ -1,0 +1,74 @@
+{#继承基础模板#}
+{% extends "wechat/layout.html" %}
+
+{#标题#}
+{% block title %}
+    收货地址
+{% endblock %}
+
+{#引入外部css#}
+{% block stylesheets %}
+    <link rel="stylesheet" href="../../../static/AmazeUI/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../../../static/weixin/Styles/wp_v3/addressInfo.css">
+{% endblock %}
+
+{#页内正式工作区#}
+{% block content %}
+    <!-- 搜索栏 -->
+    <div class="am-topbar-fixed-top">
+        <div id="search">
+            <img src="../../../static/weixin/Images/wp_v3/icon_search.png" alt="search"/>
+            <input type="text" id="searchText" name="searchText" placeholder="搜索地址" value="" />
+        </div>
+        <div id="cancelBtn">
+            取消
+        </div>
+    </div>
+
+    <div id="searchList">
+    </div>
+
+    <!-- 定位 -->
+    <div id="location">
+        <img src="../../../static/weixin/Images/wp_v3/icon_located.png" alt="location" width="14px" height="18px"/>
+        <span>定位当前位置</span>
+    </div>
+
+    <!-- 历史记录 -->
+    <div id="searchHistory">
+        <div>历史记录</div>
+        <ul id="historyList">
+            {% for record in historyAddr %}
+            <li id="{{ record['ID'] }}">
+                <span>{{ record['HISTORICAL_POSITION'] }}</span>
+                <span style="display: none">{{ record['BD_LONGITUDE'] }}</span>
+                <span style="display: none">{{ record['BD_LATITUDE'] }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+{#引入外部js#}
+{% block extra_javascripts %}
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="../../../static/weixin/Scripts/wp_v3/addressInfo.js?v=1151"></script>
+{% endblock %}
+
+{#    页面内部的js#}
+{% block load_js %}
+{#<script type="text/javascript">#}
+{#    wx.config({#}
+{#        debug: false,#}
+{#        appId: '{{ wxconfig.appid }}',#}
+{#        timestamp: {{ wxconfig.timestamp }},#}
+{#        nonceStr: '{{ wxconfig.noncestr }}',#}
+{#        signature: '{{ wxconfig.signature }}',#}
+{#        jsApiList: [#}
+{#            'getLocation',#}
+{#            'openLocation'#}
+{#        ]#}
+{#    });#}
+{#</script>#}
+{% endblock %}
+

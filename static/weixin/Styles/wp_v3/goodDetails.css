@@ -1,0 +1,150 @@
+body {
+    background: #F1F1F1;
+}
+
+#goodDetail .name {
+    padding: 10px 0;
+}
+
+#goodDetail .name .text {
+    float: left;
+    font-size: 16px;
+}
+
+#goodDetail .name #col_status {
+    float: right;
+}
+
+#goodDetail .description {
+    padding-top: 12px;
+}
+
+#goodDetail .description .triangle {
+    width: 0;
+    height: 0;
+    border-width: 0 10px 14px;
+    border-style: solid;
+    border-color: transparent transparent white;
+    margin-left: 10px;
+}
+
+#goodDetail .description .content {
+    background: white;
+    font-size: 13px;
+    color: #8E8E8E;
+    line-height: 18px;
+    letter-spacing: 1.7px;
+    padding: 17px;
+}
+
+.totalCount {
+    background: white;
+    margin-top: 2px;
+    font-size: 15px;
+    color: #323232;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    display: block; /*没有添加商品时默认隐藏*/
+}
+
+.totalCount .shoppingcart {
+    position: relative;
+}
+
+.totalCount .shoppingcart .price {
+    padding-left: 14px;
+}
+
+.totalCount .shoppingcart .num {
+    position: absolute;
+    font-size: 10px;
+    left: 20px;
+    top: 12px;
+}
+
+.totalCount .countBtn {
+    text-align: right;
+    padding-right: 10px;
+}
+
+/*.unitPrice {*/
+    /*height: 50px;*/
+    /*line-height: 50px;*/
+    /*vertical-align: middle;*/
+/*}*/
+
+/*.unitPrice .numBtn {*/
+    /*height: 50px;*/
+/*}*/
+
+/*.unitPrice .numBtn .add-btn, .unitPrice .numBtn .del-btn {*/
+    /*float: right;*/
+    /*display: block;*/
+    /*height: 50px;*/
+    /*width: 50px;*/
+    /*font-weight: bold;*/
+    /*text-align: center;*/
+    /*color: dimgray;*/
+    /*background: transparent;*/
+/*}*/
+
+/*.unitPrice .numBtn .numText {*/
+    /*float: right;*/
+    /*display: block;*/
+    /*height: 50px;*/
+    /*width: 4rem;*/
+    /*text-align: center;*/
+    /*border: 0;*/
+    /*background: transparent;*/
+/*}*/
+
+.item-bottom {
+    height: 3.4rem;
+    width: 100%;
+    line-height: 3.4rem;
+    display: inline-block;
+}
+
+.item-bottom > span, .item-bottom div {
+    height: 3.4rem;
+    line-height: 3.4rem;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+}
+
+.item-bottom div {
+    float: right;
+}
+.bottle-dec, .bottle-inc {
+    height: 3.4rem;
+    width: 3.5rem;
+    display: inline-block;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #ACACAC;
+}
+
+.bottle-dec {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.bottles-input {
+    height: 3.4rem;
+    float: right;
+}
+input {
+    height: 3.2rem;
+    line-height: 3.2rem;
+    padding: 0;
+    width: 7rem;
+    border: 0;
+    text-align: center;
+    background-color: #F1F1F1;
+    color: rgb(0, 0, 0) !important;
+}
+
+input:disabled {
+    opacity: 1;
+}

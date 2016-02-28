@@ -1,0 +1,36 @@
+.floatClass{width:48%;min-width:255px;height:310px;float:left;}
+.imgSize{width:245px;height:245px;}
+.inputbox{outline: none; height: 30px;vertical-align: middle;background: none; line-height: 30px; border: none;
+    color: #aaa; font-size: 16px; width: 200px; background: none; margin-left: 10px;}
+/*提交按钮*/
+.submitbutton{  background: #1db011;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#1db011), to(#1db011));
+      background-image: -webkit-linear-gradient(top, #1db011, #1db011);
+      background-image: -moz-linear-gradient(top, #1db011, #1db011);
+      background-image: -o-linear-gradient(top, #1db011, #1db011);
+      border-radius: 0;
+      width: 100%;
+      border: none;
+      height: 40px;
+      line-height: 40px;
+      font-family: microsoft yahei;
+      text-align: center;
+      display: block;
+      margin: 20px auto 10px;
+      font-size: 18px;
+      color: #fff;
+}
+/*地图按钮*/
+.mapbutton{
+      background: #1db011;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#1db011), to(#1db011));
+      background-image: -webkit-linear-gradient(top, #1db011, #1db011);
+      background-image: -moz-linear-gradient(top, #1db011, #1db011);
+      background-image: -o-linear-gradient(top, #1db011, #1db011);
+      border-radius: 0;
+      width: 50px;
+      line-height: 30px;
+      border: none;
+      font-size: 12px;
+      color: #f6f4f1;
+}

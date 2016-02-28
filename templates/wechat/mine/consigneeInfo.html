@@ -1,0 +1,45 @@
+{#继承基础模板#}
+{% extends "wechat/layout.html" %}
+
+{#标题#}
+{% block title %}
+    管理收货人
+{% endblock %}
+
+{#引入外部css#}
+{% block stylesheets %}
+    <link rel="stylesheet" href="../../../static/AmazeUI/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../../../static/weixin/Styles/wp_v3/consigneeInfo.css">
+{% endblock %}
+
+{#页内正式工作区#}
+{% block content %}
+    <div class="am-g am-topbar-fixed-top" id="addConsignee">
+        <div class="am-u-sm-6">收货人</div>
+        <div class="am-u-sm-6 addBtn">添加</div>
+    </div>
+
+    <ul id="consigneeList">
+    {% for consignee in consigneeList %}
+        <li class="am-g" id="{{ consignee['ID'] }}">
+            <div class="am-u-sm-6 name">
+                <img src="../../../static/weixin/Images/wp_v3/btn_squre.png" alt="checkbox" width="17px" height="17px" />
+                <span>{{ consignee['OTHERNAME'] }}</span>
+            </div>
+            <div class="am-u-sm-6 tel">
+                <span>{{ consignee['OTHERTEL'] }}</span>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <div class="am-topbar-fixed-bottom appBtn">
+        <img src="../../../static/weixin/Images/wp_v3/btn_ok.png" alt="确认" width="100%" height="49px"/><br/>
+        <img src="../../../static/weixin/Images/wp_v3/btn_clean.png" alt="删除" width="100%" height="49px" />
+    </div>
+{% endblock %}
+
+{#引入外部js#}
+{% block extra_javascripts %}
+    <script src="../../../static/weixin/Scripts/wp_v3/consigneeInfo.js?v3"></script>
+{% endblock %}

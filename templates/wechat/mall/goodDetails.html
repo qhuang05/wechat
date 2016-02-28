@@ -1,0 +1,90 @@
+{#继承基础模板#}
+{% extends "wechat/layout.html" %}
+
+{#标题#}
+{% block title %}
+    商品详情
+{% endblock %}
+
+{#引入外部css#}
+{% block stylesheets %}
+    <link rel="stylesheet" href="../../../static/AmazeUI/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../../../static/weixin/Styles/wp_v3/goodDetails.css">
+{% endblock %}
+
+{#书写本页css#}
+{% block extra_stylesheets %}
+{% endblock %}
+
+{#页内正式工作区#}
+{% block content %}
+    <div>
+        <img src="{{ goodInfo['IMG_URL'] }}" alt="商品图片" width="100%" height="251px"/>
+
+        <div class="am-container">
+            <!-- 商品描述详情 -->
+            <div id="goodDetail">
+                <div class="name">
+                    <div class="text">
+                        {{ goodInfo['ARTICLE_NAME'] }}
+                    </div>
+                    <div id="col_status">
+                        <input type="text" value="{{ status }}" style="display:none"/>
+                        <img src="/static/weixin/Images/wp_v3/btn_xiangqingye_shoucang.png" alt="收藏按钮" width="19px"
+                             height="19px"
+                             onclick="isCollect({{ goodInfo['ID'] }},this)"/>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="triangle"></div>
+                    <div class="content">
+                        {{ goodInfo['ARTICLE_EXPLAIN'] }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- 价格结算栏,没有添加商品时默认隐藏 -->
+            <div class="am-g totalCount">
+                <div class="am-u-sm-6 shoppingcart">
+                    <img src="/static/weixin/Images/wp_v3/btn_purchase.png" alt="购物车" width="19px" height="19px"/>
+                <span class="price">
+                    <img src="/static/weixin/Images/wp_v3/icon_money.png" alt="￥" width="9px" height="12px"/>
+                    <span class="money-click">0.0</span>
+                    <span>元</span>
+                </span>
+                    <span class="am-badge am-round am-badge-danger num">0</span>
+                </div>
+                <input type="hidden" id="total" name="total" value="">
+
+                <div class="am-u-sm-6 countBtn">
+                    <img src="/static/weixin/Images/wp_v3/btn_jiesuan.png" alt="结算" width="96px" height="30px"
+                         onclick="orderSubmit()"/>
+                </div>
+            </div>
+
+            <!-- 商品单价,及增减商品按钮组 -->
+            <div class="item-bottom">
+                <span>￥<span class="unit-price">{{ goodInfo['UNIT_PRICE'] }}</span>元</span>
+
+                <div id="bottles-input" class="bottles-input">
+                    <span class="bottle-dec">一</span>
+                    <input type="hidden" id="h_{{ goodInfo['ID'] }}" class="tolerant-count"
+                           value="{{ goodInfo['TOLERANT_BOTTLE'] }}">
+                    <input class="disabled-input" id="{{ goodInfo['ID'] }}" name="{{ goodInfo['ID'] }}" type="text"
+                           value="0" disabled>
+                    <span class="bottle-inc">+</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="myform" name="myform" action="/mall/orderSubmit" method="post">
+        <input type="hidden" id="count" name="count" value="">
+        <input type="hidden" id="total" name="total" value="">
+    </form>
+{% endblock %}
+
+{#引入外部js#}
+{% block extra_javascripts %}
+    <script src="../../../static/weixin/Scripts/wp_v3/goodDetails.js?v=1"></script>
+    <script src="/static/weixin/Scripts/wp_v3/tappy.js"></script>
+{% endblock %}
